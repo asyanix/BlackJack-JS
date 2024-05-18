@@ -25,8 +25,8 @@
 
 .button_shop
 {
-    width: 120px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     color: black;
     position: relative;
     border-radius: 19px;
@@ -34,7 +34,7 @@
     border: none;
     font-family: 'Roboto Slab';
     font-weight: 400;
-    font-size: 17px;
+    font-size: 14px;
     box-shadow: 4px 4px 5px rgba(221, 219, 219, 0.3);
     cursor: pointer;
 }
@@ -42,19 +42,19 @@
 #shop_item_1
 {
     top: 7rem;
-    right: 3.5rem;
+    right: 3rem;
 }
 
 #shop_item_2
 {
     top: 15rem;
-    right: 3.5rem;
+    right: 3rem;
 }
 
 #shop_item_3
 {
     top: 22.5rem;
-    right: 3.5rem;
+    right: 3rem;
 }
 
 #shop_item_1:hover
