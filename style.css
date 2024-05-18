@@ -1,0 +1,571 @@
+* 
+{
+    margin:  0;
+    padding:  0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    height: 100vh;
+    width: 100vw;
+}
+
+.game
+{
+    background: url('./image/background.jpeg') center no-repeat;
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-position: center center;
+    background-size: cover;
+}
+
+header
+{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Slab';
+    color: rgb(186, 186, 186);
+    font-size: x-large;
+    text-shadow: 4px 4px 4px black;
+    margin-bottom: 35px;
+}
+
+.main_container
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.main_board
+{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.field_dealer, .field_user
+{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.field_header
+{
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 34px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.hand_dealer, .hand_user
+{
+    height: 170px;
+    width: 470px;
+    border: 3px solid rgb(188, 188, 188);
+    border-radius: 40px;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.card, .close_card
+{
+    height: 120px;
+    position: absolute;
+    width: auto;
+}
+
+#sum_hand_dealer, #sum_hand_user
+{
+    height: 50px;
+    width: 50px;
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size: 28px;
+    box-shadow: 0px 5px 6px inset rgb(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.result_bar
+{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 55px;
+}
+
+#result_text
+{
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.result_box
+{
+    width: 430px;
+    height: 64%;
+    background-color: #801a1a;
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.buttons_play_box
+{
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons_play
+{
+    width: 130px;
+    height: 50px;
+    border: none;
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    font-size: 20px;
+    font-weight: 300;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.5);
+}
+
+#button_hit
+{
+    background-color: rgb(72, 71, 71);
+}
+
+#button_hit:hover
+{
+    background-color: rgb(104, 104, 104);
+    cursor: pointer;
+}
+
+#button_stand
+{
+    background-color: #801a1a;
+}
+
+#button_stand:hover
+{
+    background-color: #972121;
+    cursor: pointer;
+}
+
+.deck_cards img
+{
+    height: 140px;
+    width: auto;
+}
+
+footer
+{
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#button_score
+{
+    position: relative;
+    right: 24rem;
+    width: 130px;
+    height: 50px;
+    border: none;
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    font-size: 20px;
+    font-weight: 300;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.5);
+    background-color: rgb(72, 71, 71);
+}
+
+#button_score:hover
+{
+    background-color: rgb(104, 104, 104);
+    cursor: pointer;
+}
+
+#score_container
+{
+    z-index: -1;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score_table
+{
+    width: 700px;
+    height: 350px;
+    border: 4px solid #ffffff;
+    background-color: rgb(213, 213, 213);
+    box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.7);
+    border-radius: 70px;
+    cursor: pointer;
+}
+
+.active_table
+{
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.line_1
+{
+    width: 90%;
+    border: 2px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    position: relative;
+    top: 5rem;
+    left: 2.2rem;
+}
+
+.line_2
+{
+    width: 46%;
+    transform: rotate(90deg);
+    border: 2px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    position: relative;
+    top: 10.5rem;
+    left: 11.2rem;
+}
+
+.header_score
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size: 28px;
+    color: rgb(104, 104, 104);
+}
+
+.body_score
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 120px;
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size: 28px;
+    color: rgb(104, 104, 104);
+}
+
+.user_bank img
+{
+    height: 70px;
+    width: auto;
+    position: absolute;
+    bottom: 20px;
+}
+
+.money
+{
+    height: 55px;
+    width: 180px;
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size: 28px;
+    border: 2px solid rgb(223, 223, 223);
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 15px;
+    background-color: rgb(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.5);
+    margin-right: 100px;
+}
+
+.user_bet input
+{
+    border: none;
+    height: 55px;
+    width: 220px;
+    background-color: rgb(72, 71, 71);
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size: 26px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.5);
+}
+
+.user_bet input:hover
+{
+    background-color: rgb(97, 97, 97);
+    cursor: pointer;
+}
+
+#unactive, #active
+{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#close_card_2
+{
+    position: absolute;
+    top: 11.5rem;
+    left: 41rem;
+}
+
+#close_card_3
+{
+    position: absolute;
+    top: 11.5rem;
+    left: 46.5rem;
+}
+
+#close_card_4
+{
+    position: absolute;
+    top: 11.5rem;
+    left: 52rem;
+}
+
+#close_card_5
+{
+    position: absolute;
+    top: 11.5rem;
+    left: 57.5rem;
+}
+
+.on_board_dealer_1
+{
+    animation: dealerCard1 .6s ease-out forwards; 
+}
+
+.on_board_dealer_2
+{
+    animation: dealerCard2 .6s ease-out forwards; 
+}
+
+.on_board_dealer_3
+{
+    animation: dealerCard3 .6s ease-out forwards; 
+}
+
+.on_board_dealer_4
+{
+    animation: dealerCard4 .6s ease-out forwards; 
+}
+
+.on_board_dealer_5
+{
+    animation: dealerCard5 .6s ease-out forwards; 
+}
+
+.on_board_user_1
+{
+    animation: userCard1 .6s ease-out forwards; 
+}
+
+.on_board_user_2
+{
+    animation: userCard2 .6s ease-out forwards; 
+}
+
+.on_board_user_3
+{
+    animation: userCard3 .6s ease-out forwards; 
+}
+
+.on_board_user_4
+{
+    animation: userCard4 .6s ease-out forwards; 
+}
+
+.on_board_user_5
+{
+    animation: userCard5 .6s ease-out forwards; 
+}
+
+.box_block
+{
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.close_card_off
+{
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        clip-path: inset(0 0 0 0);
+    }
+    to {
+        
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+@keyframes dealerCard1 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 11.5rem;
+        left: 35.5rem;
+    }
+}
+
+@keyframes dealerCard2 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 11.5rem;
+        left: 41rem;
+    }
+}
+
+@keyframes dealerCard3 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 11.5rem;
+        left: 46.5rem;
+    }
+}
+
+@keyframes dealerCard4 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 11.5rem;
+        left: 52rem;
+    }
+}
+
+@keyframes dealerCard5 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 11.5rem;
+        left: 57.5rem;
+    }
+}
+
+@keyframes userCard1 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 30.5rem;
+        left: 35.5rem;
+    }
+}
+
+@keyframes userCard2 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 30.5rem;
+        left: 41rem;
+    }
+}
+
+@keyframes userCard3 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 30.5rem;
+        left: 46.5rem;
+    }
+}
+
+@keyframes userCard4 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 30.5rem;
+        left: 52rem;
+    }
+}
+
+@keyframes userCard5 {
+    0% {
+        top: 21rem;
+        left: 69rem;
+    }
+    100% {
+        top: 30.5rem;
+        left: 57.5rem;
+    }
+}

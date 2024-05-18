@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Roboto+Slab:wght@100..900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <div class="game" id="game">
+        <header>
+            <h1>Blackjack</h1>
+        </header>
+
+        <div class="main_container">
+            <div class="buttons_play_box">
+                <input type="button" value="Ещё" class="buttons_play" id="button_hit">
+                <input type="button" value="Хватит" class="buttons_play" id="button_stand">
+            </div>
+
+            <div class="main_board">
+                <div class="field_dealer">
+                    <h2 class="field_header">Дилер</h2>
+                    <div class="hand_dealer">
+                        <img class="card" id="card_dealer_1" src="" style="z-index: -1;">
+                        <img class="card" id="card_dealer_2" src="" style="z-index: -1;">
+                        <img class="close_card" id="close_card_2" src="image/cards/cardshirt.png" style="z-index: -1;">
+                        <img class="card" id="card_dealer_3" src="" style="z-index: -1;">
+                        <img class="close_card" id="close_card_3" src="image/cards/cardshirt.png" style="z-index: -1;">
+                        <img class="card" id="card_dealer_4" src="" style="z-index: -1;">
+                        <img class="close_card" id="close_card_4" src="image/cards/cardshirt.png" style="z-index: -1;">
+                        <img class="card" id="card_dealer_5" src="" style="z-index: -1;">
+                        <img class="close_card" id="close_card_5" src="image/cards/cardshirt.png" style="z-index: -1;">
+                    </div>
+                    <div id="sum_hand_dealer"></div>
+                </div>
+
+                <div class="result_bar">
+                    <div class="result_box" style="display: none;">
+                        <p id="result_text"></p>
+                    </div>
+                </div>
+
+                <div class="field_user">
+                    <h2 class="field_header">Игрок</h2>
+                    <div class="hand_user">
+                        <img class="card" id="card_user_1" src="" style="z-index: -1;">
+                        <img class="card" id="card_user_2" src="" style="z-index: -1;">
+                        <img class="card" id="card_user_3" src="" style="z-index: -1;">
+                        <img class="card" id="card_user_4" src="" style="z-index: -1;">
+                        <img class="card" id="card_user_5" src="" style="z-index: -1;">
+                    </div>
+                    <div id="sum_hand_user"></div>
+                </div>
+
+                <!-- <div class="menu_shop">
+                    <p>SHOP</p>
+                    <button id="shop_item_1" class="button_shop" type="button">1K$</button>
+                    <button id="shop_item_2" class="button_shop" type="button">5K$</button>
+                    <button id="shop_item_3" class="button_shop" type="button">10K$</button>
+                </div> -->
+            </div>
+
+            <div class="deck_cards">
+                <img class="deck_cards-img" src="image/deck.png" alt="deck">
+            </div>
+        </div>
+
+        <footer>
+            <button id="button_score" value="score">Счёт</button>
+            <div id="score_container">
+                <div id="score_table">
+                    <div class="line_1"></div>
+                    <div class="line_2"></div>
+                    <div class="header_score">
+                        <p>Игрок</p>
+                        <p>Дилер</p>
+                    </div>
+                    <div class="body_score">
+                        <p id="global_score_user"></p>
+                        <p id="global_score_dealer"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="user_bank">
+                <img src="image/game_chips.png" alt="game_chips">
+                <div class="money" id="money_amount"></div>
+            </div>
+            <div class="user_bet">
+                <input type="text" name="sum_bet" id="sum_bet" placeholder="Размер ставки">
+            </div>
+            <div class="submit_bet">
+                <button class="button_success", id = "unactive" style="display: block;"><img src="image/success-unactive.png" alt="submit_bet"></button>
+                <button class="button_success", id = "active" style="display: none;"><img src="image/success-active.png" alt="submit_bet"></button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

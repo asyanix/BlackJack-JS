@@ -1,0 +1,133 @@
+.menu_shop
+{
+    width: 80px;
+    height: 70%;
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+    border: 2px solid rgb(223, 223, 223);
+    border-radius: 35px;
+    background-color: rgb(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.5);
+}
+
+.menu_shop p
+{
+    position: absolute;
+    color: rgb(223, 223, 223);
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size: 24px;
+    top: 1.7rem;
+    right: 0.27rem;
+}
+
+
+.button_shop
+{
+    width: 120px;
+    height: 45px;
+    color: black;
+    position: relative;
+    border-radius: 19px;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 17px;
+    box-shadow: 4px 4px 5px rgba(221, 219, 219, 0.3);
+    cursor: pointer;
+}
+
+#shop_item_1
+{
+    top: 7rem;
+    right: 3.5rem;
+}
+
+#shop_item_2
+{
+    top: 15rem;
+    right: 3.5rem;
+}
+
+#shop_item_3
+{
+    top: 22.5rem;
+    right: 3.5rem;
+}
+
+#shop_item_1:hover
+{
+    background-image: url(image/cards2/Ace\(3\).png);
+    background-position: center;
+    background-size: 150px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+#shop_item_2:hover
+{
+    background-image: url(image/item_2_back.png);
+    background-position: center;
+    background-size: 80px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+#shop_item_3:hover
+{
+    background-image: url(image/never_gonna_give.jpg);
+    background-size: 80px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+#item_3
+{
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+}
+
+#gif_1
+{
+    position: absolute;
+    top: 2rem;
+    right: 7rem;
+    width: 160px;
+    height: 160px;
+}
+
+#gif_2
+{
+    position: absolute;
+    bottom: 9rem;
+    left: 10rem;
+    width: 210px;
+    height: 210px;
+}
+
+#gif_3
+{
+    position: absolute;
+    bottom: 2rem;
+    right: 7rem;
+    width: 180px;
+    height: 180px;
+}
+
+#gif_4
+{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 250px;
+    height: 250px;
+}
+
+#gif_5
+{
+    position: absolute;
+    top: 21rem;
+    right: 47rem;
+    width: 160px;
+    height: 160px;
+}
